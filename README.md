@@ -19,4 +19,3 @@ using overflow and transition.
 middle term project next week. Use the GitHub and invite me as a
 collaborator as well. Your group will do the presentation this Friday. Use
 GitHub projects to keep logs of all the process.
->>>>>>> 347bcba59174466adaf6365c2ced4b6b6555bdc0
