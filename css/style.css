@@ -39,47 +39,58 @@ body {
   .subtitle {
       font-size: 1.5rem;
       text-align: center;
-      color: rgba(255, 255, 255, 1);
+      color: rgba(255, 255, 255, 0);
       letter-spacing: 1.5rem;
       margin-bottom: 5rem;
-      /* display: none; */
   }
 
   .subtitle {
-      animation: fadding 3s 2s;
+      animation: fadding 3s 2s forwards;
       animation-delay: 4s;
       animation-duration: 3s;
   }
 
   @keyframes fadding {
-      0% { letter-spacing: 0rem; color: rgba(255, 255, 255, 0);}
-      100% { letter-spacing: 1.5rem; color: rgba(255, 255, 255, 1);}      
-  }
+    0% { letter-spacing: 0rem; color: rgba(255, 255, 255, 0);}
+    100% { letter-spacing: 1.5rem; color: rgba(255, 255, 255, 1);}      
+}
 
-    .menu {
-        display: block;
-        margin: 
-        width: 50vw;
-    }
-    .list li {
-        display:block;
-        width:14vw;
-        float:left;
-        margin-left:3em;
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
-    
-    .list a {
-        display:block;
-        padding:10px;
-        text-decoration:none;
-        color:#fff;
-    }
-    
-    .list a:hover {
-        color:fff;
-        text-shadow: gray 15px 10px 4px;
-        font-size: 1.7rem;
-    }
+  .list li a {
+    animation: faddingmenu 3s 2s forwards;
+    animation-delay: 4s;
+    animation-duration: 3s;
+}
+
+@keyframes faddingmenu {
+    0% { letter-spacing: 0rem; color: rgba(255, 255, 255, 0);}
+    100% { letter-spacing: 0.2rem; color: rgba(255, 255, 255, 1);}      
+}
+
+.list {
+    padding-left: 5px;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.list li {
+    margin: 3em;
+    text-align: center;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+.list a {
+    padding:10px;
+    text-decoration:none;
+    color:rgba(255, 255, 255, 0);        
+}
+
+.list a:hover {
+    color:fff;
+    text-shadow: gray 15px 10px 4px;
+    font-size: 1.7rem;
+    float: none;
+    position: relative;
+}
