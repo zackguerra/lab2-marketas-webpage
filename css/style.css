@@ -9,6 +9,7 @@
     font-family: 'Roboto', sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .toplogocenter {
@@ -105,6 +106,10 @@
     font-size: 1.5rem;
     list-style: none;
     width: 300px;
+}
+
+.list li:nth-child(2) {
+    margin-right: 2vw;
 }
 
 .list a {
