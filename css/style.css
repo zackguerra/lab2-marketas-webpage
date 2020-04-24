@@ -4,8 +4,10 @@
 :root {
     background-image: url(/img/back.jpg);
     font-family: 'Roboto', sans-serif;
-    
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 body {
     display: block;
     margin: 0px;
@@ -29,8 +31,9 @@ body {
 }
 
 .imgcontainer {
-    animation: topdown 2s 1.5s;
+    animation: topdown 2s 1.5s forwards;
     animation-delay: 2s;
+    transform: translateY(-200px);
   }
   
   @keyframes topdown {
