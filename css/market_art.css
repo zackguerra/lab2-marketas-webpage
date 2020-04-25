@@ -3,6 +3,7 @@
     font-family: 'Roboto', sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body{
@@ -12,18 +13,6 @@ body{
 .toplogocenter {
     align-content: center;
     display: flex;
-}
-
-.mainlogo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 300px;
-    position: relative;
-    top: -100px;
-    animation-duration: 2s;
-    transform-origin: bottom;  
 }
 
 .imgcontainer {
@@ -38,6 +27,71 @@ body{
     100% { transform: translateY(0); }
   }
 
+  .list li a {
+    font-family: 'Roboto', sans-serif;
+
+    animation: faddingmenu 3s 2s forwards;
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+
+@keyframes faddingmenu {
+    0% { 
+        letter-spacing: 0rem; 
+        color: rgba(255, 255, 255, 0);
+    }
+    100% { 
+        letter-spacing: 0.2rem; 
+        color: rgba(255, 255, 255, 1);
+    }      
+}
+
+/* ##  ALIGN MENU ## */
+.list, .list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/* ########################## */
+
+.list {
+    padding-top: 100px;
+}
+
+.list li {
+    font-size: 1.5rem;
+    list-style: none;
+    width: 300px;
+}
+
+.list li:nth-child(2) {
+    margin-right: 2vw;
+}
+
+.list a {
+    text-decoration:none;
+    color:rgba(255, 255, 255, 0);
+    line-height: 2rem;  
+}
+
+.list a:hover {
+    color:#fff;
+    text-shadow: gray 15px 10px 4px;
+    font-size: 1.6rem;
+}
+
+.header {
+    display: flex;
+}
+
+h2 {
+    font-size: 3.3em;
+    font-family: 'Kaushan Script', 'Roboto', sans-serif;
+    margin: 50px 0 0 150px;
+    color: #fff;
+}
+
 
 
 
@@ -46,13 +100,17 @@ body{
     height: 100vh;
     opacity: 0.7;
 }
-/* #logo_img{
-    width: 20vw;
-    height: 20vw;
-    position: absolute;
-    top: -15%;
-    left: 10%;
-} */
+
+.mainlogo {
+    display: block;
+    width: 10vw;
+    position: relative;
+    top: -100px;
+    left: 0px;
+    animation-duration: 2s;
+    transform-origin: bottom;  
+}
+
 h1{
     font-size: 5em;
     color: #fff;
@@ -65,15 +123,24 @@ h1{
 
 /* ========== slideshow ========== */
 
+#slide-container {
+    display: flex;
+    margin: 0 auto ;
+    margin-top: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 #slideshow{
     width: 640px;
     height: 400px;
     margin: 100px auto;
     overflow: hidden;
     text-align: center;
-    position: absolute;
+    /* position: absolute;
     top: 35%;
-    left: 33%;
+    left: 33%; */
 }
 #image_box{
     width: 1920px;
@@ -95,7 +162,7 @@ h1{
     height: 15px;
     width: 15px;
     border-radius: 55px;
-    background-color: skyblue;
+    background-color: #fff;
     margin: 0 5px 0 5px;
 }
 #slider-image-1:target~#image_box {
