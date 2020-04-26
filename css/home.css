@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    background-image: url(/img/back.jpg);
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.imgcontainer {
+    animation: topdown 2s 1.5s forwards;
+    animation-delay: 1s;
+    transform: translateY(-200px);
+}
+
+.mainlogo {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: -100px;
+    animation-duration: 2s;
+    transform-origin: bottom;  
+}
+ 
+.subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0);
+    letter-spacing: 1.3rem;
+    margin: 5rem auto;
+    animation: fadding 3s 2s forwards;
+    animation-delay: 2s;
+    animation-duration: 3s;
+}
+
+.list {
+    padding-top: 70px;
+}
+
+.list li a {
+    animation: faddingmenu 3s 2s forwards;
+    animation-delay: 3s;
+    animation-duration: 3s;
+}
+
+
+.list, .list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list li {
+    list-style: none;
+    width: 350px;
+}
+
+.list li:nth-child(2) {
+    margin-right: 40px;
+}
+
+.list a {
+    font-size: 1.8rem;
+    text-decoration:none;
+    color:rgba(255, 255, 255, 0);
+    line-height: 2rem;  
+}
+
+.list a:hover {
+    color:#fff;
+    text-shadow: 7px 2px 8px rgba(0,0,0,0.91) ;
+    font-size: 2rem;
+}
+
+.toggler{
+    display: none;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* #################################### */
+/* ######### ANIMATION PART ########### */
+/* #################################### */
+
+@keyframes topdown {
+    0%   { 
+        transform: translateY(-200px); 
+        opacity: 0.5%;
+    }
+    50%  { 
+        transform: translateY(30px); 
+    }
+    100% { 
+        transform: translateY(0); 
+        opacity: 100%;
+    }
+}
+
+@keyframes fadding {
+    0% { 
+        letter-spacing: 0rem; 
+        color: rgba(255, 255, 255, 0);
+    }
+    100% { 
+        letter-spacing: 1.5rem; 
+        color: rgba(255, 255, 255, 1);
+    }      
+}
+
+@keyframes faddingmenu {
+    0% { 
+        letter-spacing: 0rem; 
+        color: rgba(255, 255, 255, 0);
+    }
+    100% { 
+        letter-spacing: 0.2rem; 
+        color: rgba(255, 255, 255, 1);
+    }      
+}
+
+
+/* #################################### */
+/* ######### RESPONSIVE PART ########## */
+/* #################################### */
+
+@media all and (max-width: 1560px) {
+
+    .subtitle h2 {
+        font-size: 1.8rem;
+        letter-spacing: 0.7rem;
+    }
+
+    .list a {
+        font-size: 1.3rem;
+    }
+
+    .list {
+        padding-top: 20px;
+    }
+
+    .list li {
+        width: 250px;
+    }
+
+    .list li:nth-child(5) {
+        margin-right: 40px;
+    }
+
+    .list a:hover {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width: 1260px) {
+
+    .list a {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media all and (max-width: 980px) {
+
+    .mainlogo {
+        width: 250px;
+        height: 280px;
+    }
+
+    .subtitle h2 {
+        font-size: 1.6rem;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .list li {
+        margin-top: 10px;
+    }
+
+    .list li:nth-child(2), .list li:nth-child(5) {
+        margin-right: 0px;
+    }
+}
+
+@media all and (max-width: 860px) {
+
+    .mainlogo {
+        width: 200px;
+        height: 250px;
+    }
+
+    .subtitle h2 {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 100px;
+        letter-spacing: 1rem;
+    }
+
+    @keyframes fadding {
+        0% { 
+            color: rgba(255, 255, 255, 0);
+        }
+        100% { 
+            color: rgba(255, 255, 255, 1);
+        }      
+    }
+
+}
+
+@media all and (max-width: 600px) {
+
+    .toggler{
+        display: flex;
+    }
+
+    .subtitle {
+        margin-top: 180px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+    
+}
+
+/* ######### MOBILE - IPHONE X ######### */ 
+
+@media all and (max-width: 580px) {
+
+    .subtitle h2 {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 100px;
+        font-size: 1.3rem;
+        letter-spacing: 0.8rem;
+    }
+}
